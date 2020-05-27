@@ -28,15 +28,6 @@ class TestRecharge(unittest.TestCase):
         # 请求方法
         method = case["method"]
         # 请求参数
-        # if case["interface"] == "login":
-        #     if "#user#" in case["data"]:
-        #         case["data"] = case["data"].replace("#user#", my_conf.get_str("test_data", "user"))
-        #     if "#pwd#" in case["data"]:
-        #         case["data"] = case["data"].replace("#pwd#", my_conf.get_str("test_data", "pwd"))
-        # # 判断是否有用户id需要替换
-        # if "#member_id#" in case["data"]:
-        #     # 进行替换
-        #     case["data"] = case["data"].replace("#member_id#", str(self.member_id))
         case["data"] = replace_data(case["data"])
 
         data = eval(case["data"])

@@ -10,7 +10,7 @@ from common.my_logger import my_log
 
 @ddt
 class TestLogin(unittest.TestCase):
-    excel = ReadExcel(os.path.join(DATA_DIR, "apicases.xlsx"), "login")
+    excel = ReadExcel(os.path.join(DATA_DIR, "apicases_login.xlsx"), "login")
     cases = excel.read_data()
 
     http = HandRequests()

@@ -12,7 +12,7 @@ from common.hand_mysql import HandMysql
 
 @ddt
 class TestRegister(unittest.TestCase):
-    excel = ReadExcel(os.path.join(DATA_DIR, "apicases.xlsx"), "register")
+    excel = ReadExcel(os.path.join(DATA_DIR, "apicases_login.xlsx"), "register")
     cases = excel.read_data()
 
     http = HandRequests()

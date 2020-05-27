@@ -47,6 +47,7 @@ class TestAdd(unittest.TestCase):
         result = response.json()
         if case["interface"] == "login":
             admin_member_id = jsonpath.jsonpath(result, "$..id")[0]
+            my_log.info("admin_member_id：{}".format(admin_member_id))
             token_type = jsonpath.jsonpath(result, "$..token_type")[0]
             token = jsonpath.jsonpath(result, "$..token")[0]
             token_data = token_type + " " + token

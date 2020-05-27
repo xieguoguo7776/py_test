@@ -1,8 +1,8 @@
 import unittest
-from common.contents import REPORT_DIR, CASE_DIR
+from common.contents import REPORT_DIR,CASE_DIR
 from common.my_config import my_conf
 import os
-
+from test_cases import test_add
 from common.send_email import send_msg
 
 # 第一步：创建一个测试套件
@@ -11,7 +11,7 @@ suite = unittest.TestSuite()
 # 第二步：将测试用例，加载到测试套件中(通过路径加载)
 loader = unittest.TestLoader()
 suite.addTest(loader.discover(CASE_DIR))
-# suite.addTest(loader.loadTestsFromModule(test_login))
+# suite.addTest(loader.loadTestsFromModule(test_add))
 
 # 第三步：创建一个测试运行程序启动器
 from HTMLTestRunnerNew import HTMLTestRunner
