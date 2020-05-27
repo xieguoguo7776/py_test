@@ -2,10 +2,6 @@ import unittest
 from common.contents import REPORT_DIR, CASE_DIR
 from common.my_config import my_conf
 import os
-from test_cases import bb_test_recharge, \
-    test_register, \
-    test_recharge_2, \
-    test_add, aa_test_invest, test_invest_2, test_login
 
 from common.send_email import send_msg
 
